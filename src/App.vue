@@ -1,8 +1,14 @@
 <template>
   <div id="app">
-1111
+    <home></home>
   </div>
 </template>
-
+<script>
+import Home from '@/views/Home'
+export default {
+  components: { Home },
+  
+}
+</script>
 <style>
 </style>
