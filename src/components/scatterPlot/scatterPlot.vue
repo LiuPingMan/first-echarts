@@ -46,10 +46,37 @@ export default {
           type: 'value',
           scale: true,
         },
+        grid: { // 网格
+          show: true,
+          left: "50%",
+          top: 200,
+          borderWidth: 2,
+          borderColor: '#ff3322',
+          width: 500,
+          height: 300
+        },
         series: [
           {
-            type: 'scatter',
-            data: axisData
+            // type: 'scatter', // 散点图
+            type: 'effectScatter', // 水波纹散点图
+            showEffectOn: 'emphasis', // render emphasis
+            rippleEffect: {
+              scale: 10
+            },
+            data: axisData,
+            symbolSize: function(params) {
+              console.log(params);
+              if(params[1] / ((params[0] / 100) * (params[0] / 100)) > 35) {
+                return 10
+              } else return 5
+            },
+            itemStyle: {
+              color: function(params) {
+                if(params.data[1] / ((params.data[0] / 100) * (params.data[0] / 100)) > 35) {
+                  return 'red'
+                } else return 'blue'
+              }
+            }
           }
         ]
       }
