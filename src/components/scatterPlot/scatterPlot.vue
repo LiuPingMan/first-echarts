@@ -36,7 +36,6 @@ export default {
         let arr = [this.data[i].height,this.data[i].weight]
         axisData.push(arr)
       }
-      console.log(axisData);
       let option = {
         xAxis: {
           type: 'value',
@@ -65,7 +64,6 @@ export default {
             },
             data: axisData,
             symbolSize: function(params) {
-              console.log(params);
               if(params[1] / ((params[0] / 100) * (params[0] / 100)) > 35) {
                 return 10
               } else return 5
