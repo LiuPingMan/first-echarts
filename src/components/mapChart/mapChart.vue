@@ -21,8 +21,10 @@ export default {
   },
   methods: {  
     async init() {
-      await this.getMapData()
       let mapChart = this.$echarts.init(document.querySelector('#mapChart'))
+      mapChart.showLoading()
+      await this.getMapData()
+      mapChart.hideLoading()
       this.$echarts.registerMap("chinaMap", this.mapData)
       let option = {
         geo: {

@@ -76,6 +76,7 @@ export default {
                 }
               ]
             },
+            color: ['yellow','blue'],//调色盘
             label: {
               show: true,
               // rotate: 60,
@@ -112,12 +113,25 @@ export default {
             barWidth:'40%',
             data: [80, 67, 87, 93, 46, 84]
           },
-        ]
+        ],
+        animation: true,
+        animationDuration: function(args) { //动画时长
+          console.log(args);
+          return args * 1000
+        },
+        animationEasing: 'bounceOut',//动画缓动
       }
       chart.setOption(option)
     }
   }
 }
+
+
+
+
+
+
+
 </script>
 <style scoped>
 #barForm {

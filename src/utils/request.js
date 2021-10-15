@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-let baseURL = 'http://192.168.92.47:8000/'
+let baseURL = 'http://127.0.0.1:8888/'
 // 创建axios，赋给变量service
 const service = axios.create(
   {

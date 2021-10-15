@@ -1,4 +1,8 @@
 module.exports = {
+  devServer: {
+    port: 8999,
+    open: true,
+  },
   // 基本路径
   // pulicPath: process.env.NOOD_ENV === 'production' ? '' : '/',
   // 构建时的输出目录
