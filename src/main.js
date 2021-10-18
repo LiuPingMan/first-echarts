@@ -5,6 +5,7 @@ import store from './store'
 import * as echarts from 'echarts'
 import './assets/css/global.less'
 import '../public/static/theme/chalk'
+import './assets/font/iconfont.css'
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false
 

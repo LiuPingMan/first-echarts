@@ -7,3 +7,11 @@ export function getSellerData(params) {
     params: params
   })
 }
+
+export function getTrendData(params) {
+  return request({
+    url: '/trend',
+    method: 'get',
+    params: params
+  })
+}
