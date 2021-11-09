@@ -2,6 +2,12 @@ module.exports = {
   devServer: {
     port: 8999,
     open: true,
+    proxy: {
+      '/api': {
+        target: 'http://127.0.0.1:8888',
+        changeOrigin: true,
+      }
+    }
   },
   // 基本路径
   // pulicPath: process.env.NOOD_ENV === 'production' ? '' : '/',

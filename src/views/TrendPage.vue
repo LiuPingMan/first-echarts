@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Trend from '@/components/Trend.vue'
+import Trend from '@/components/trend.vue'
 export default {
   components: { 
     Trend,

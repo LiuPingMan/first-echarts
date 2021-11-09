@@ -1,15 +1,16 @@
 <template>
   <div class="com-page">
-    <m-map></m-map>
+    <rank></rank>
   </div>
 </template>
 
 <script>
-import MMap from '@/components/Map.vue';
+import Rank from '@/components/Rank.vue'
 export default {
-  components: {
-    MMap
+  components: { 
+    Rank,
   },
+
 }
 </script>
 

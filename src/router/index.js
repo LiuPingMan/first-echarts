@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '',
-    redirect: '/trendPage'
+    redirect: '/rankPage'
   },
   {
     path: '/sellerPage',
@@ -22,6 +22,10 @@ const routes = [
   {
     path: '/mapPage',
     component: MapPage
+  },
+  {
+    path: '/rankPage',
+    component: () => import ('@/views/RankPage')
   }
 ]
 

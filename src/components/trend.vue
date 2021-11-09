@@ -1,7 +1,7 @@
 <template>
   <div class="com-container">
     <div class="title" :style="comStyle">
-      <span>| {{showTitle}}</span>
+      <span>▎{{showTitle}}</span>
       <span
         class="iconfont icon-arrow-down title-icon"
         :style="comStyle"
@@ -205,7 +205,8 @@ export default {
       }
     }
     .select-con {
-      background-color: #222;
+      background-color: #222
+      ;
     }
   }
 </style>
